@@ -5,15 +5,16 @@
 This Python script is written for Project assigned by Udacity in Machine Learning foundation Nanodegree Program. It is used to explore data related to bike share systems acoss the Chicago, New York City, and Washington. It imports data from csv files and compute descriptive statistics from the data.
 It also take users' raw input which makes this program user interactive.
 
-How to run the script - Requirements:
-You can run the script using a Python integrated development environment (IDE) such as Spyder. To install Spyder, you will need to download the Anaconda installer. This script is written in Python 3, so you will need the Python 3.x version of the installer. After downloading and installing Anaconda, you will find the Spyder IDE by opening Anaconda Navigator.
+<h2>How to run the script - Requirements:</h2>
+<p>
+You can run the script using a Python integrated development environment (IDE) such as Spyder. To install Spyder, you will need to download the Anaconda installer. This script is written in Python 3, so you will need the Python 3.x version of the installer. After downloading and installing Anaconda, you will find the Spyder IDE by opening Anaconda Navigator.</p>
 
 Alternatively you can install any code editor like Atom or Sublime Text editor or Visual studio Code. After installing Anaconda you can run this script in the anaconda prompt by typing> python (filename)
 
-Theory of Bike Share Data:
-Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.
+<h2>Theory of Bike Share Data:</h2>
+<p>Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.</p>
 
-Thanks to the rise in information technologies, it is easy for a user of the system to access a dock within the system to unlock or return bicycles. These technologies also provide a wealth of data that can be used to explore how these bike-sharing systems are used.
+<p>Thanks to the rise in information technologies, it is easy for a user of the system to access a dock within the system to unlock or return bicycles. These technologies also provide a wealth of data that can be used to explore how these bike-sharing systems are used.</p>
 
 
 <h2>Datasets:</h2>
