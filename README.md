@@ -46,13 +46,13 @@ The Chicago and New York City files also have the following two columns:
   
 The script answers the following questions about the bike share data:
 <ul>
-  <li>What is the most popular month for start time?</li>
-  <li>What is the most popular day of week (Monday, Tuesday, etc.) for start time?</li>
-  <li>What is the most popular hour of day for start time?</li>
-  <li>What is the total trip duration and average trip duration?</li>
-  <li>What is the most popular start station and most popular end station?</li>
-  <li>What is the most popular trip?</li>
-  <li>What are the counts of each user type?</li>
-  <li>What are the counts of gender?</li>
-  <li>What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?</li></ul>
+<li>What is the most popular month for start time?</li>
+<li>What is the most popular day of week (Monday, Tuesday, etc.) for start time?</li>
+<li>What is the most popular hour of day for start time?</li>
+<li>What is the total trip duration and average trip duration?</li>
+<li>What is the most popular start station and most popular end station?</li>
+<li>What is the most popular trip?</li>
+<li>What are the counts of each user type?</li>
+<li>What are the counts of gender?</li>
+<li>What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?</li></ul>
 
