@@ -41,8 +41,9 @@ The Chicago and New York City files also have the following two columns:
   <li>Gender</li>
   <li>Birth Year</li>
 <ul>
+<p>  
 <h2>Questions explored</h2>
-<p>
+  
 The script answers the following questions about the bike share data:
 <ul>
   <li>What is the most popular month for start time?</li>
@@ -53,4 +54,5 @@ The script answers the following questions about the bike share data:
   <li>What is the most popular trip?</li>
   <li>What are the counts of each user type?</li>
   <li>What are the counts of gender?</li>
-  <li>What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?</li></ul></p>
+  <li>What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?</li></ul>
+</p>
