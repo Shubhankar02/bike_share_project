@@ -20,13 +20,14 @@ Thanks to the rise in information technologies, it is easy for a user of the sys
 
 
 <p>
-The datasets used for this script contain bike share data for the first six months of 2017. Some data wrangling has been performed by Udacity's staff before being provided to the students of DAND. Under the permission of Udacity, I have uploaded a copy of the datasets here on Google Drive, since The file sizes are too big to be uploaded on GitHub. After downloading the datasets, place all the files in the same folder with this Python script.
+The datasets used for this script contain bike share data for the first six months of 2017. Some data wrangling has been performed by Udacity's staff before being provided to the students of DAND. Under the permission of Udacity, I have uploaded a copy of the datasets <a href="https://drive.google.com/drive/folders/13jJCbT1Fs5hlOBvhlznuCdzvdaLNA2cl?usp=sharing">here</a> on Google Drive, since The file sizes are too big to be uploaded on GitHub. After downloading the datasets, place all the files in the same folder with this Python script.
 </p>
 <p>
 <strong>***Note:</strong> After opening the script file check the file path in the CITY_DATA dictonary. If your file path doesn't match then it will throw an error.<strong> ***</strong>
 </P>
-data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. You will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
 <p>
+data provided by <a href="https://www.motivateco.com/">Motivate</a> a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. You will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
+</p>
 Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
 
 Start Time (e.g., 2017-01-01 00:07:57)
