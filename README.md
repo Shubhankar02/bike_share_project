@@ -41,7 +41,7 @@ The Chicago and New York City files also have the following two columns:
   <li>Gender</li>
   <li>Birth Year</li>
 <ul>
-<p>  
+  
 <h2>Questions explored</h2>
   
 The script answers the following questions about the bike share data:
@@ -55,4 +55,4 @@ The script answers the following questions about the bike share data:
   <li>What are the counts of each user type?</li>
   <li>What are the counts of gender?</li>
   <li>What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?</li></ul>
-</p>
+
