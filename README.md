@@ -37,10 +37,10 @@ Start Station (e.g., Broadway & Barry Ave)
 End Station (e.g., Sedgwick St & North Ave)
 User Type (Subscriber or Customer)
 The Chicago and New York City files also have the following two columns:
-
-Gender
-Birth Year
-
+<ul>
+  <li>Gender</li>
+  <li>Birth Year</li>
+<ul>
 <h2>Questions explored</h2>
 <p>
 The script answers the following questions about the bike share data:
