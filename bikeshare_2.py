@@ -1,9 +1,14 @@
 import time
 import pandas as pd
 
+<<<<<<< HEAD
 
 CITY_DATA = {'chicago': "chicago.csv",
              'new york city': "new_york_city.csv",
+=======
+CITY_DATA = {'chicago': "chicago.csv",
+             'new york': "new_york_city.csv",
+>>>>>>> 42a114c92423de1d2c7ada79b8f89c8f96133d7a
              'washington': "washington.csv"}
 
 
@@ -51,6 +56,7 @@ def get_month():
         (str) String representation of month, e.g. for January it returns 'jan'
     '''
     month = input('\nWould you like to filter the data by month.\n'
+<<<<<<< HEAD
                   'If yes then type the month name as Jan, Feb, Mar, Apr, May,'
                   'Jun. Type None for no filter\n'
                   'Data available from January to June only\n').lower()
@@ -59,6 +65,28 @@ def get_month():
 
     if month not in months:
         print('\nHumm.....sorry, I don\'t get by which month you want data to '
+=======
+                  'If yes then type the month,\n'
+                  'for e.g, jan as january. Type none for no filter.\n'
+                  'Data available from January to June only\n').title()
+
+    if month == 'None':
+        return 'none'
+    elif month == 'Jan':
+        return 'jan'
+    elif month == 'Feb':
+        return 'feb'
+    elif month == 'Mar':
+        return 'mar'
+    elif month == 'Apr':
+        return 'apr'
+    elif month == 'May':
+        return 'may'
+    elif month == 'Jun':
+        return 'jun'
+    else:
+        print('\nHumm.....sorry, I don\'t get by which month you want data to'
+>>>>>>> 42a114c92423de1d2c7ada79b8f89c8f96133d7a
               'be sorted. Let\'s try again.')
         return get_month()
     else:
@@ -181,6 +209,7 @@ def station_stats(df):
         print(start_station)
         print('-' * 40)
         print(' ' * 40)
+<<<<<<< HEAD
 
         # display most commonly used end station
         print('Most commonly used end station')
@@ -189,6 +218,16 @@ def station_stats(df):
         print('-' * 40)
         print(' ' * 40)
 
+=======
+
+        # display most commonly used end station
+        print('Most commonly used end station')
+        end_station = df['End Station'].mode()[0]
+        print(end_station)
+        print('-' * 40)
+        print(' ' * 40)
+
+>>>>>>> 42a114c92423de1d2c7ada79b8f89c8f96133d7a
         # display most frequent combination of start station and end station
         # trip
         print('Most frequent combination of start station'
