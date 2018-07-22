@@ -1,8 +1,9 @@
 import time
 import pandas as pd
 
+
 CITY_DATA = {'chicago': "chicago.csv",
-             'new york': "new_york_city.csv",
+             'new york city': "new_york_city.csv",
              'washington': "washington.csv"}
 
 
@@ -13,9 +14,9 @@ def get_filters():
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by,
-        or "all" to apply no month filter
+        or "none" to apply no month filter
         (str) day - name of the day of week to filter by,
-         or "all" to apply no day filter
+         or "None" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
     # get user input for city (chicago, new york city, washington).
@@ -32,17 +33,14 @@ def get_filters():
 
 def get_city():
     city = input('Which city you would like to explore, Chicago, Washington '
-                 'or New York City\n').title()
-    if city == 'Chicago':
-        return 'chicago'
-    elif city == 'New York':
-        return 'new york'
-    elif city == 'Washington':
-        return 'washington'
-    else:
-        print('Sorry, I am not sure which city you are referring to.'
-              'Let\'s try again')
+                 'or New York City\n').lower()
+
+    if city not in CITY_DATA.keys():
+        print("Sorry I am not sure which city you are reffering to\n"
+              "Let\'s try again")
         return get_city()
+    else:
+        return city
 
 
 def get_month():
@@ -53,28 +51,18 @@ def get_month():
         (str) String representation of month, e.g. for January it returns 'jan'
     '''
     month = input('\nWould you like to filter the data by month.\n'
-                  'If yes then type the month,\n'
-                  'for e.g, jan as january. Type none for no filter.\n'
-                  'Data available from January to June only\n').title()
+                  'If yes then type the month name as Jan, Feb, Mar, Apr, May,'
+                  'Jun. Type None for no filter\n'
+                  'Data available from January to June only\n').lower()
 
-    if month == 'None':
-        return 'none'
-    elif month == 'Jan':
-        return 'jan'
-    elif month == 'Feb':
-        return 'feb'
-    elif month == 'Mar':
-        return 'mar'
-    elif month == 'Apr':
-        return 'apr'
-    elif month == 'May':
-        return 'may'
-    elif month == 'Jun':
-        return 'jun'
-    else:
-        print('\nHumm.....sorry, I don\'t get by which month you want data to'
+    months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'none']
+
+    if month not in months:
+        print('\nHumm.....sorry, I don\'t get by which month you want data to '
               'be sorted. Let\'s try again.')
         return get_month()
+    else:
+        return month
 
 
 def get_day():
@@ -87,30 +75,20 @@ def get_day():
     Returns:
         (Str)String representation of day like sun for Sunday
     '''
-    day_of_week = input('\nOkay! Last one! Which day of the week?\n'
-                        'for e.g Sun for Sunday.\n'
-                        'Type none for no filter\n').title()
+    day_of_week = input('\nWould you like to filter the data by month.\n'
+                        'If yes then type the day names as Sunday, Monday,\n'
+                        'Tuesday, Wednesday, Thursday, Friday, Saturday\n'
+                        'Type None for no filter\n').title()
 
-    if day_of_week == 'None':
-        return 'none'
-    elif day_of_week == 'Mon':
-        return 'Monday'
-    elif day_of_week == 'Tue' or day_of_week == 'Tues':
-        return 'Tuesday'
-    elif day_of_week == 'Wed':
-        return 'Wednesday'
-    elif day_of_week == 'Thu' or day_of_week == 'Thur':
-        return 'Thursday'
-    elif day_of_week == 'Fri':
-        return 'Friday'
-    elif day_of_week == 'Sat':
-        return 'Saturday'
-    elif day_of_week == 'Sun':
-        return 'Sunday'
-    else:
-        print('\nI\'m sorry, I\'m not sure which day of the week'
+    weeks = ['Monday', 'Tuesday', 'Wednesday', 'Thursday',
+             'Friday', 'Saturday', 'Sunday', 'None']
+
+    if day_of_week not in weeks:
+        print('\nI\'m sorry, I\'m not sure which day of the week\n'
               'you\'re trying to filter by. Let\'s try again.')
         return get_day()
+    else:
+        return day_of_week
 
 
 def load_data(city, month, day):
@@ -147,7 +125,7 @@ def load_data(city, month, day):
         df = df[df['month'] == month]
 
     # filter by day of week if applicable
-    if day != 'none':
+    if day != 'None':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
 
@@ -307,6 +285,35 @@ def user_stats(df):
         print('*'*40)
 
 
+def display_data(df, current_line):
+    '''Displays five lines of data if the user specifies that they would like to.
+    After displaying five lines, ask the user if they would like to see five
+    more.
+    Continues asking until they say stop.
+    Args:
+        df: dataframe of bikeshare data
+    Returns:
+        If the user says yes then this function returns the next five lines
+            of the dataframe and then asks the question again by calling this
+            function again (recursive)
+        If the user says no then this function returns, but without any value
+    '''
+    display = input('\nWould you like to view individual trip data?'
+                    ' Type \'yes\' or \'no\'.\n')
+    display = display.lower()
+    if display == 'yes' or display == 'y':
+        print(df.iloc[current_line:current_line+5])
+        current_line += 5
+        return display_data(df, current_line)
+    if display == 'no' or display == 'n':
+        return
+    else:
+        print('\nI\'m sorry, I\'m not sure if you wanted'
+              ' to see more data or not.\n'
+              'Let\'s try again.')
+        return display_data(df, current_line)
+
+
 def main():
     try:
         while True:
@@ -317,6 +324,7 @@ def main():
             station_stats(df)
             trip_duration_stats(df)
             user_stats(df)
+            display_data(df, 0)
 
             restart = input('\nWould you like to restart? Enter yes or no.\n')
             if restart.lower() != 'yes':
